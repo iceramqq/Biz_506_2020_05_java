@@ -2,13 +2,13 @@ package com.biz.control;
 
 import java.util.Random;
 
-public class if_06 {
+public class if_07 {
 
 	public static void main(String[] args) {
 		Random rnd = new Random();
-		int intkor = rnd.nextInt(100);
-		int inteng = rnd.nextInt(100);
-		int intmath = rnd.nextInt(100);
+		int intkor = rnd.nextInt(51) + 50;
+		int inteng = rnd.nextInt(51) + 50;
+		int intmath = rnd.nextInt(51) + 50;
 
 		int sum = intkor + inteng + intmath;
 		int avg = sum / 3;
