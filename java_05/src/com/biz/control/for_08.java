@@ -35,7 +35,7 @@ public class for_08 {
 		 */
 		
 		int sum=0;
-		for (int i = 0, sum = 0; i < 5; i++) {
+		for (int i = 0; i < 5; i++) {
 			sum += i;
 		}
 		System.out.println("결과"+sum);
