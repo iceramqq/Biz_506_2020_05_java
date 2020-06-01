@@ -31,15 +31,12 @@ public class ClassEx_11 {
 		}
 		
 		bankList[0].setIntInput(5000);
-		bankList[1].setIntOuput(1000);
+		bankList[1].setIntOutput(1000);
 		bankList[2].setIntInput(5000);
-		bankList[3].setIntOuput(1000);
-		bankList[4].setIntOuput(1000);
+		bankList[3].setIntOutput(1000);
+		bankList[4].setIntOutput(1000);
 		
-		
-		
-		
-		
+			
 		
 	}
 
