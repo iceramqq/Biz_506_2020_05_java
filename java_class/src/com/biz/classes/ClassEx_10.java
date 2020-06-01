@@ -1,44 +1,51 @@
 package com.biz.classes;
 
-import com.biz.classes.model.ScoreVO;
-import com.biz.classes.service.ScoreService;
+import com.biz.classes.model.BookVO;
+import com.biz.classes.service.BookService;
 
 public class ClassEx_10 {
+
 	public static void main(String[] args) {
 		
-		int intKor=90;
-		int intEng=80;
-		int intMath=70;
-		int intMusic=90;
-		int intArt=99;
-		int intSci=100;
+		// BookVO클래스를 이용하여 
+		// bookList 인스턴스 배열을 3개 선언
+		BookVO[] bookList = new BookVO[3];
 		
-		/*
-		 * 메서드의 매개변수 전달
-		 * 전달하고자 하는 매개변수가 몇개 안될때는
-		 * 매개변수를 잘못전달하여 발생하는 문제가 별로 없다
-		 * 하지만 매개변수으 개수가 많아지면
-		 * 값이 뒤바뀔수도 있고, 경우에 따라 누락되거나,
-		 * 중복 등 잘못 전달 될수있다
-		 * 
-		 * 이럴때 매개변수를 담을 클래스를 만들고
-		 * 인스턴스를 생성한 후 인스턴스의
-		 * 멤버변수에 값을 담고 
-		 */
-		ScoreService scoreService=new ScoreService();
-		int sum=scoreService.sum(intKor,intEng,intMath,intMusic,intArt,intSci);
+		// 인스턴스 배열은 사용전에 각각 요소들을
+		// 한번더 생성해주는 코드가 필요하다.
+		bookList[0] = new BookVO();
+		bookList[1] = new BookVO();
+		bookList[2] = new BookVO();
 		
-		ScoreVO score=new ScoreVO();
-		score.setInKor(intKor);
-		score.setInEng(intEng);
-		score.setInMath(intMath);
-		score.setInMusic(intMusic);
-		score.setInArt(intArt);
-		score.setInSci(intSci);
-		sum=scoreService.sum(score);
-		System.out.println("총점 : "+sum);
+		bookList[0].isbn = "001";
+		bookList[1].isbn = "002";
+		bookList[2].isbn = "003";
+		
+		bookList[0].title = "자바입문";
+		bookList[1].title = "자바의 정석";
+		bookList[2].title = "오라클입문";
+		
+		bookList[0].auth = "박은종";
+		bookList[1].auth = "남궁성";
+		bookList[2].auth = "정재훈";
 				
+		bookList[0].comp = "이지스퍼블리싱";
+		bookList[1].comp = "도우출판";
+		bookList[2].comp = "한빛";
+		
+		bookList[0].price = 35000;
+		bookList[1].price = 30000;
+		bookList[2].price = 15000;
+		
+		BookService bookService = new BookService();
+		
+		bookService.bookInfo(bookList[0]);
+		bookService.bookInfo(bookList[1]);
+		bookService.bookInfo(bookList[2]);
+		
+		bookService.bookList(bookList);
+		
 		
 	}
-
+	
 }
