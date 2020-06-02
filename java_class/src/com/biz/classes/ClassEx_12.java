@@ -1,7 +1,11 @@
 package com.biz.classes;
 
 import com.biz.classes.model.BankVO;
+<<<<<<< HEAD
 import com.biz.classes.service.BankServiceV2;
+=======
+import com.biz.classes.service.BankService;
+>>>>>>> a2b573374f05fb70fa6d52a29e973fc1702a6d3f
 
 public class ClassEx_12 {
 	
@@ -41,6 +45,7 @@ public class ClassEx_12 {
 		bankList[3].setIntOutput(1000);
 		bankList[4].setIntOutput(1000);
 		
+<<<<<<< HEAD
 		//기본형 변수
 		//primitive variable
 		int num=0;//integer
@@ -69,6 +74,9 @@ public class ClassEx_12 {
 		//BankServiceV2 클래스내에 정의된
 		//bankList() 
 		bankService.bankList();
+=======
+		BankService bankService = new BankService();
+>>>>>>> a2b573374f05fb70fa6d52a29e973fc1702a6d3f
 		
 		bankService.bankList(bankList);
 		
