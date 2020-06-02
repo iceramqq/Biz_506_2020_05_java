@@ -12,11 +12,11 @@ public class var_19 {
 		int num=rnd.nextInt(500)+501;
 		Korscore=(float)num/10;
 		
-		int num=rnd.nextInt(500)+501;
-		Engscore=(float)num/10;
+		int num1=rnd.nextInt(500)+501;
+		Engscore=(float)num1/10;
 		
-		int num=rnd.nextInt(500)+501;
-		Mathscore=(float)num/10;
+		int num2=rnd.nextInt(500)+501;
+		Mathscore=(float)num2/10;
 		
 		float sum=Korscore+Mathscore+Korscore;
 		float avg=sum/3;

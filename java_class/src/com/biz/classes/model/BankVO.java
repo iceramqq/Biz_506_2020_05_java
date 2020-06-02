@@ -4,11 +4,10 @@ public class BankVO {
 	
 	private String strNum;
 	private String strDate;
-	private int intInput;
-	private int intOuput;
-	private int intValance;
-
 	
+	private int intInput;
+	private int intOutput;
+	private int intValance;
 	
 	public String getStrNum() {
 		return strNum;
@@ -28,11 +27,11 @@ public class BankVO {
 	public void setIntInput(int intInput) {
 		this.intInput = intInput;
 	}
-	public int getIntOuput() {
-		return intOuput;
+	public int getIntOutput() {
+		return intOutput;
 	}
-	public void setIntOuput(int intOuput) {
-		this.intOuput = intOuput;
+	public void setIntOutput(int intOutput) {
+		this.intOutput = intOutput;
 	}
 	public int getIntValance() {
 		return intValance;
@@ -40,10 +39,8 @@ public class BankVO {
 	public void setIntValance(int intValance) {
 		this.intValance = intValance;
 	}
+
 	
 	
-	
-	
-		
 
 }

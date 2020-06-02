@@ -4,7 +4,7 @@ public class var_18 {
 	public static void main(String[] args) {
 		int intKor=88;
 		int intEng=77;
-		int intmath=68;
+		int intMath=68;
 		
 		int intSum=intKor+intEng+intMath;
 		

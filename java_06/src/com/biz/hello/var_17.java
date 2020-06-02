@@ -25,11 +25,11 @@ public class var_17 {
 		int intSum;
 		int intAvg;
 		
-		intSum=intKorScore;
-		intSum+=intEngScore;
-		intSum+=intMathScore;
+		intSum=intKor;
+		intSum+=intEng;
+		intSum+=intMath;
 		
-		intAvg=sum/3;
+		intAvg=intSum/3;
 		
 		System.out.println("총점"+intSum);
 		System.out.println("평균"+intAvg);

@@ -1,4 +1,4 @@
-package com.biz.classes.service;
+package com.biz.service;
 
 /*
  * 클래스에 method를 선언해 두고
