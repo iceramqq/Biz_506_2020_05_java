@@ -37,6 +37,7 @@ public class ScoreEx_02 {
 		ScoreServiceV2 sService1=new ScoreServiceV2();
 		sService1.stSum(scoreList);
 		sService1.stAvg();
+		sService1.scoreLisr();
 		
 	}
 
