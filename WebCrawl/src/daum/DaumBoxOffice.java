@@ -30,7 +30,6 @@ public class DaumBoxOffice {
 			System.out.println("영화제목: " + title);
 			System.out.println("URL: " + daumHref);
 			System.out.println("영화코드: " + daumCode);
-			
 		}
 	}
 }
