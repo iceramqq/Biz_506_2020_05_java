@@ -11,23 +11,26 @@ public class DaumMovie {
 	public static void main(String[] args) throws IOException {
 		int page = 1;
 		int cnt =0;
+		String writer = "";
+		int score = 0;
+		String content = "";
+		String regDt = "";
 		while (true) {
+
 			String url = "https://movie.daum.net/moviedb/grade?movieId=134684&type=netizen&page="+page;
 			
 			Document doc = Jsoup.connect(url).get();
 			Elements replyList = doc.select("div.review_info");
 			
-			String writer = "";
-			int score = 0;
-			String content = "";
-			String regDtCut = "";
-			String regDt = "";
+			if(replyList.size() == 0) {
+				break;
+			}
+
 			for (Element one : replyList) {
-				content = one.select("p.desc_review").get(0).text();
-				writer = one.select("div.review_info a").get(0).text();
-				score = Integer.parseInt(one.select("em.emph_grade").get(0).text());
-				regDtCut = one.select("span.info_append").get(0).text();
-				regDt = (String) regDtCut.subSequence(0, regDtCut.lastIndexOf(","));
+				content = one.select("p.desc_review").text();
+				writer = one.select("div.review_info a").text();
+				score = Integer.parseInt(one.select("em.emph_grade").text());
+				regDt = one.select("span.info_append").text().substring(0, 10);
 				System.out.println("==========================================================================================");
 				System.out.println("내용: " + content);
 				System.out.println("평점: " + score);
@@ -36,12 +39,14 @@ public class DaumMovie {
 				cnt += 1;
 				
 			}
-			if(writer.equals("")) {
-				break;
-			}
+			
+			
 			page += 1;
+			
 		}
+		
 		System.out.println("총"+cnt+"건 수집했습니다");
+		
 	}
 
 }

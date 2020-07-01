@@ -14,7 +14,7 @@ public class NaverFinance {
 		// base 사이트로 가서 전체 페이지의 소스코드를 가져옴
 		Document doc = Jsoup.connect(base).get();
 		Elements line = doc.select("table.type2 > tbody > tr");
-		int count = 0;
+		
 		for (Element element : line) {
 			Elements tds = element.select("td");
 			if(tds.size() == 9) {

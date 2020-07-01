@@ -21,7 +21,7 @@ import org.json.simple.parser.JSONParser;
 public class ParseMoive {
 
 	// 1. 파싱하고 싶은 URL 생성
-	String key = "ee84a95a06a4aae67fc4490ac2bcdb3a";
+	String key = "0ba459bb0394bb64388f70772614f7b4";
 	String today = "";
 	String[][] arrBoxOffice = new String[10][4];
 

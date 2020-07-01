@@ -2,8 +2,6 @@ package naver;
 
 import java.io.IOException;
 
-import javax.swing.text.AbstractDocument.BranchElement;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -14,7 +12,7 @@ public class NaverBoxOffice {
 		String url = "https://movie.naver.com/movie/running/current.nhn";
 
 		Document doc = Jsoup.connect(url).get();
-		System.out.println(doc);
+		// System.out.println(doc);
 		Elements moivelist = doc.select("div.lst_wrap > ul.lst_detail_t1 > li");
 		
 		String title = "";           // 영화 제목

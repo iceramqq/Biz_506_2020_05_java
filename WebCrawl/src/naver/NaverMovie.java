@@ -20,7 +20,7 @@ public class NaverMovie {
 			Document doc = Jsoup.connect(url).get();
 			Elements replyList = doc.select("div.score_result li");
 			String nowPage = doc.select("input#page").attr("value");
-			//System.out.println(">>>>>>>>>>>>>>>>>>>>>"+prePage+","+nowPage);
+			// System.out.println(">>>>>>>>>>>>>>>>>>>>>"+prePage+","+nowPage);
 			
 			if(nowPage.equals(prePage)) {
 				break;
@@ -28,7 +28,7 @@ public class NaverMovie {
 				prePage = nowPage;
 			}
 			
-			String writer = "";
+			String writer = "";;
 			int score = 0;
 			String content = "";
 			String regDt = "";
@@ -36,7 +36,7 @@ public class NaverMovie {
 				content = one.select("div.score_reple > p > span").get(0).text();
 				writer = one.select("div.score_reple a > span").get(0).text();
 				score = Integer.parseInt(one.select("div.star_score > em").get(0).text());
-				regDt = one.select("div.score_reple em").get(1).text();	
+				regDt = one.select("div.score_reple em").get(1).text().substring(0, 10);
 				System.out.println("==========================================================================================");
 				System.out.println("내용: " + content);
 				System.out.println("평점: " + score);
