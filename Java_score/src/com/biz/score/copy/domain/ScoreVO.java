@@ -1,23 +1,25 @@
-package com.biz.score;
+package com.biz.score.copy.domain;
 
 public class ScoreVO {
 	
+	/*
+	 * 성적처리 과정에서 1학생의 성적을 담는
+	 * 변수
+	 * 클래스 라고한다.
+	 * 클래스들을 클래스 라고 한다.
+	 * 
+	 * 필드변수를 로 설정하고 
+	 * 필드변수에 접근 를 선언
+	 * 
+	 * 이러한 
+	 */
 	private String strNum = "";
 	private int intKor = 0;
 	private int intEng = 0;
 	private int intMath = 0;
 	private int intSum = 0;
-	private int intAvg = 0;
-			
-	public ScoreVO(String strNum, int intKor, int intEng, int intMath, int intSum, int intAvg) {
-		super();
-		this.strNum = strNum;
-		this.intKor = intKor;
-		this.intEng = intEng;
-		this.intMath = intMath;
-		this.intSum = intSum;
-		this.intAvg = intAvg;
-	}
+	private float floatAvg = 0;
+	
 	public String getStrNum() {
 		return strNum;
 	}
@@ -27,9 +29,17 @@ public class ScoreVO {
 	public int getIntKor() {
 		return intKor;
 	}
-	public void setIntKor(int intKor) {
+	
+	// 성적은 0 ~ 100까지가 
+	public boolean setIntKor(int intKor) {
+		
+		if(intKor < 0 || intKor > 100) {
+			return false;
+		}
 		this.intKor = intKor;
+		return true;
 	}
+	
 	public int getIntEng() {
 		return intEng;
 	}
@@ -48,11 +58,12 @@ public class ScoreVO {
 	public void setIntSum(int intSum) {
 		this.intSum = intSum;
 	}
-	public int getIntAvg() {
-		return intAvg;
+	public float getFloatAvg() {
+		return floatAvg;
 	}
-	public void setIntAvg(int intAvg) {
-		this.intAvg = intAvg;
+	public void setFloatAvg(float floatAvg) {
+		this.floatAvg = floatAvg;
 	}
+	
 	
 }
