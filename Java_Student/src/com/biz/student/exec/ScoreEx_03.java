@@ -19,7 +19,7 @@ public class ScoreEx_03 {
 	public static void main(String[] args) {
 		
 		PrintWriter output = null; //System.out;
-		String outFile = "src/com/biz/student/exec/Score.csv";
+		String outFile = "src/com/biz/student/exec/Score.txt";
 		
 		// 지금부터 변수에 저장된 파일이름으로
 		// 를 기록하기 위해 파일을 만들어라
