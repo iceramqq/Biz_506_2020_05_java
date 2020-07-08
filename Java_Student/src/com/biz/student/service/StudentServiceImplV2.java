@@ -25,17 +25,17 @@ public class StudentServiceImplV2 extends StudentServiceImplV1 {
 		outPut = System.out;
 		System.out.println("콘솔에 데이터 출력하기");
 		// 파일을 작성하는 과정에서
-				// 아무리 코드를 잘 작성해도 운영체제 차원에서 발생하는 은
-				//코드에서 처리가 어렵다는 것을 컴파일러가 알고 잇기 때문에
-				//개발자에게 의무적으로 처리를 하도록 규정하고 있다
-				try {
-					outPut = new PrintStream(studentFile);
-				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					// e.printStackTrace();
-					System.out.println(studentFile + " 파일을 만들수 없음!!");
-					return;
-				}
+		// 아무리 코드를 잘 작성해도 운영체제 차원에서 발생하는 은
+		//코드에서 처리가 어렵다는 것을 컴파일러가 알고 잇기 때문에
+		//개발자에게 의무적으로 처리를 하도록 규정하고 있다
+		try {
+			outPut = new PrintStream(studentFile);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+			System.out.println(studentFile + " 파일을 만들수 없음!!");
+			return;
+		}
 	}
 	
 	@Override
